@@ -12,8 +12,6 @@
             var $div = $(".top_user");
             var $content="<div class='user_message'><img class='user_icon' src='img/1208228.png'><div class='input_word'><span>"+input_content+"</span><em></em></div></div>";
             $top.append($content);
-            // var i = $top[0].scrollHeight;
-            // $top.scrollTop(i);
             var input_content = $(".chat_input").val('');
             sendAjax(input_content);
             var i = $top[0].scrollHeight;
