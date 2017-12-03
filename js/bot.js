@@ -16,6 +16,7 @@
             sendAjax(input_content);
             var i = $top[0].scrollHeight;
             $top.scrollTop(i);
+
         }
     });
     function sendAjax(input_content) {
@@ -24,6 +25,7 @@
             data:input_content,
             async:false,
             type:"POST",
+            
             success: function (data) {
                 show_bot_response(data);
             },
