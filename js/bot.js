@@ -2,7 +2,7 @@
  * Created by Qpp on 2017/12/3.
  */
 (function(){
-    $(".submit").click(function () {
+    $("#chat_submit").click(function () {
         var input_content = $(".chat_input").val();
         if(input_content == ''){
             // alert("内容为空");
@@ -25,7 +25,7 @@
             data:input_content,
             async:false,
             type:"POST",
-            
+
             success: function (data) {
                 show_bot_response(data);
             },
@@ -42,7 +42,12 @@
     }
 
     $(".voice_icon").click(function(){
+    });
+
+    $("#voice_icon").click({
+      $(".chat").css("display","none");
 
     });
+
 
 })();

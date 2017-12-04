@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>bot</title>
-    <link rel="stylesheet" href="bot.css">
+    <link rel="stylesheet" href="css/bot.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="warp">
@@ -13,17 +14,28 @@
         </div>
         <div class="top"></div>
         <div class="bottom">
-            <div class="chat">
+            <div class="chat" style="display:none">
                 <img class="chat_icon"src="img/chat_icon3.png"/>
                 <div class="input_warp">
                     <input class="chat_input" type="text">
-                    <button class="submit" type="submit">SUBMIT</button>
+                    <button class="submit" id="chat_submit"type="submit">SUBMIT</button>
                     <img class="submit_icon" src="img/next_2.png" >
                 </div>
             </div>
-            <img class="voice_icon" src="img/mkf/11705062.png" title="voice search">
-            <div class="voice"></div>
 
+            <div class="voice">
+                <img class="chat_icon"src="img/chat_icon.png"/>
+                <div class="voice_warp">
+                    <audio id="menuAudioPlayer" controls=true type="audio/mp3" preload="auto"></audio>
+                </div>
+                <span class='region-recording' id="regionStatus" style='display:none;'>录音中...</span>
+                <!-- <div class="recordingButtons">
+                    <input type='image' class='eye' src= onclick='slideview.startRecording(this);' />
+                    <input type='image' class='eye' style='display: none;' src="{% static "slide/slide_img/stoprecord.png"%}" onclick='slideview.stopRecording(this);' disabled='disabled'/>
+                </div> -->
+            </div>
+            <img class="voice_icon" src="img/mkf/11705062.png" title="voice search" onclick="startRecording()">
+            <img class="voice_icon" src="img/mkf/1197699.png" title="voice search" onclick="stopRecording()" style="display:none">
         </div>
     </div>
 

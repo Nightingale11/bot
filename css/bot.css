@@ -46,6 +46,7 @@ body{
     padding:0px 90px;
     margin: 0px 16px;
 }
+/*char*/
 .chat{
     position: relative;
     /*border: 1px solid red;*/
@@ -102,6 +103,21 @@ body{
     top: 52px;
     left: 590px;
     width: 20px;
+}
+/*chat end*/
+/*voice*/
+
+/*voice end*/
+.voice{
+  position: relative;
+}
+.voice_warp {
+  position: relative;
+  left: 63px;
+  top: 51px;
+}
+.voice_warp audio{
+  width: 409px;
 }
 
 /*bottom end*/
