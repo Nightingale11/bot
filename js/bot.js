@@ -108,7 +108,7 @@
                             "<img class='bot_icon' src='img/robot.png'>"+
                             "<div class='search_result'>"+
                             "<span class='record_voice'><b>Your voice: </b> "+ voice_word+"</span><em></em>"+
-                            " <iframe src='https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=monline_3_dg&wd=Pluto%27s%20History&oq=iframe%25E7%2594%25A8%25E6%25B3%2595&rsv_pq=f5cd275200038222&rsv_t=1730SZmqRDDvW0zVUvDuDX%2FKQKbBQHfuRCXfSNK4z7Mx8kf1JAc8ASc24kxtOytDoj8%2B&rqlang=cn&rsv_enter=1&inputT=2441&rsv_sug3=8&rsv_sug1=7&rsv_sug7=100&rsv_n=2&bs=iframe%E7%94%A8%E6%B3%95'></iframe>"+
+                            " <iframe src='"+search_result+"'></iframe>"+
                             "</div></div>";
         $top.append($search_result);
         var i = $top[0].scrollHeight;
