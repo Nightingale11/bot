@@ -1,8 +1,8 @@
 *{padding: 0px;margin: 0px}
 body{
     /*background-color: #f2f2f2;*/
-    background: url("img/spark-bg.png");
-    background: url("img/homescreen.jpeg") no-repeat;
+    /*background: url("img/spark-bg.png");*/
+    background: url("../img/homescreen.jpeg") no-repeat;
     /*background: url("img/fcb3879e14429d75833a461572e64.jpg") no-repeat;*/
     background-size: 2000px 3000px;
     /*background-size: 120% 120%;*/
@@ -11,7 +11,7 @@ body{
 .warp{
     width: 800px;
     background: #fff;
-    margin: 10px auto;
+    margin: 20px auto;
     /*padding: 20px;*/
     /*margin-bottom: 65px;*/
     border: 1px solid #e8e8e8;
