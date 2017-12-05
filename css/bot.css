@@ -1,5 +1,8 @@
-*{padding: 0px;margin: 0px}
+*{padding: 0px;margin: 0px;font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;}
 body{
+  /*position: fixed;*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
     /*background-color: #f2f2f2;*/
     /*background: url("img/spark-bg.png");*/
     background: url("../img/homescreen.jpeg") no-repeat;
@@ -27,8 +30,8 @@ body{
     color:#563d7c;}
 .top{
     /*color:whitesmoke;*/
-    height: 537px;
-    max-height: 537px;
+    /*height: 537px;
+    max-height: 537px;*/
     margin: 10px 16px 0px;
     border-top-left-radius: 4px;
     border-top-right-radius: 5px;
@@ -40,15 +43,16 @@ body{
 }
 .bottom{
     /*color:whitesmoke;*/
-    height: 105px;
+    /*height: 105px;*/
     position: relative;
     background-color: #4b6477;
     padding:0px 90px;
-    margin: 0px 16px;
+    margin: 0px 16px 10px;
 }
 /*tool*/
 .tool{
   position: relative;
+  cursor: pointer;
 
 }
 .tool i{
@@ -64,6 +68,9 @@ body{
   color: white;
 }
 
+.icon_hover:hover{
+  font-size: 26px;
+}
 /*tool end*/
 /*chat*/
 .chat{
@@ -122,16 +129,61 @@ body{
 .voice_warp {
   position: relative;
   left: 65px;
-  top: 51px;
+  top: 45px;
 }
 .voice_warp audio{
-  width: 406px;
-  height: 26px;
+  width: 347px;
+  height: 30px;
 }
 .record_icon{
   position: relative;
+  /*border: 1px solid black;*/
+  width: 70px;
+  /* height: 80px; */
+  left: 418px;
+  top: -7px;
+  cursor: pointer;
 }
-
+.record_icon i{
+  position: absolute;
+  top: 15px;
+  font-size: 24px;
+  padding: 4px 5px;
+  background-color: rgb(255, 255, 255);
+  color: #3975aa;
+}
+.stop{
+  left: 33px;
+}
+.search{
+  position: absolute;
+  width: 71px;
+  left: 516px;
+  top: 50%;
+}
+.search_word{
+  position: relative;
+  top: 17px;
+  left: 525px;
+  color: white;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.39);
+  border-radius: 12px;
+}
+#search{
+  cursor: pointer;
+}
+@-webkit-keyframes rotation{
+  from{-webkit-transform:rotate(0deg);}
+  to{-webkit-transform:rotate(360deg);}
+}
+.rotation{
+  -webkit-transform: rotate(360deg);
+  animation: rotation 6s linear infinite;
+  -moz-animation: rotation 6s linear infinite;
+  -webkit-animation: rotation 6s linear infinite;
+  -o-animation: rotation 6s linear infinite;
+}
 /*bottom end*/
 /*top*/
 .top_user{
@@ -189,7 +241,7 @@ body{
     color: white;
     font-size: 16px;
     max-width: 300px;
-    min-height: 35px;
+    min-height: 33px;
     word-wrap: break-word;
     float: right;
     padding-left: 9px;
@@ -211,6 +263,7 @@ body{
     top: 7px;
 }
 /*input end*/
+/*bot reply*/
 .bot_icon{
     width: 44px;
     float: left;
@@ -220,9 +273,9 @@ body{
     background-color: #ffdb6f;;
     border: 2px solid black;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     max-width: 300px;
-    min-height: 37px;
+    min-height: 33px;
     word-wrap: break-word;
     float: left;
     padding-left: 9px;
@@ -246,4 +299,70 @@ body{
     left: -18px;
     top: 7px;
 
+}
+/*bot reply end*/
+/*search result*/
+.search_warp{
+  /*border: 1px solid black;*/
+  overflow: auto;
+  margin-top: 8px;
+}
+.search_result{
+  /*background-color: #ffdb6f;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  max-width: 600px;
+  min-height: 33px;
+  word-wrap: break-word;
+  float: left;
+  padding: 0px 9px 3px;
+  margin: 0px 20px;
+  position: relative;*/
+
+  position: relative;
+  word-wrap: break-word;
+  font-size: 14px;
+  float: left;
+  max-width: 600px;
+  min-height: 33px;
+  padding: 9px;
+  border: 1px solid #e3e3e3;
+  border-bottom-color: #e0e0e0;
+  border-right-color: #ececec;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.072);
+  -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.072);
+}
+.search_result:after{
+    /*content: '';
+    position: absolute;
+    border: 10px dashed transparent;
+    border-right-color: #ffdb6f;
+    left: -18px;
+    top: 7px;*/
+
+}
+/*.search_result   em{
+    position: absolute;
+    border: 10px dashed transparent;
+    border-right-color: #0b0b0b;
+    top: 7px;
+    left: -21px;
+}*/
+.record_voice{
+  border: 1px dashed rgba(116, 55, 55, 0.25);
+  border-radius: 6px;
+  display: block;
+  padding: 4px 10px;
+  line-height: 24px;
+}
+.record_voice b{
+  color: #cf3a39;
+}
+.result{
+  display: block;
+  line-height: 22px;
+  background-color: rgba(255, 255, 255, 0.74);
+  padding: 8px;
+  border: 1px solid white;
 }

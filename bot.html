@@ -12,11 +12,16 @@
             <img src="img/robot-1.png" style="width: 35px">
             <span>Chatbot </span>
         </div>
-        <div class="top"></div>
+        <div class="top">
+          <div class='user_message'>
+            <img class='bot_icon' src='img/robot.png'>
+            <div class='bot_word'><span>Hi. How are you today? </span><em></em>
+            </div></div>
+        </div>
         <div class="bottom">
             <div class="tool">
-              <i class="fa fa-weixin chat_icon"></i>
-              <i class="fa fa-microphone voice_icon"></i>
+              <i class="fa fa-weixin chat_icon" title="chat"></i>
+              <i class="fa fa-microphone voice_icon" title="search"></i>
               <!-- <img class="chat_icon" src="img/chat_icon3.png"/>
               <img class="chat_icon"src="img/chat_icon.png"/>
               <img class="voice_icon" src="img/mkf/11705062.png" title="voice search>" />
@@ -24,9 +29,9 @@
             </div>
             <div class="chat" >
                     <div class="input_warp">
-                    <input class="chat_input" type="text">
+                    <input class="chat_input" type="text" autofocus>
                     <button class="submit" id="chat_submit"type="submit">SUBMIT</button>
-                    <img class="submit_icon" src="img/next_2.png" >
+                    <img class="submit_icon" src="img/next_2.png">
                 </div>
             </div>
 
@@ -40,9 +45,14 @@
                     <input type='image' class='eye' style='display: none;' src="{% static "slide/slide_img/stoprecord.png"%}" onclick='slideview.stopRecording(this);' disabled='disabled'/>
                 </div> -->
                 <div class="record_icon">
-                  <i class="fa fa-playcircle"></i>
-                  <i class="fa fa-stopcircle"></i>
+                  <i class="fa fa-play-circle start" title="start"></i>
+                  <i class="fa fa-stop-circle stop" title="stop"></i>
                 </div>
+                <div id="search">
+                  <img class="search" src="img/planet-earth-1.png" />
+                  <span class="search_word">search</span>
+                </div>
+
 
 
             </div>
