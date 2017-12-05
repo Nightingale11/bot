@@ -27,7 +27,10 @@ body{
 }
 .title span{
     font-size: 32px;
-    color:#563d7c;}
+    color:#563d7c;
+    font-family: Caslon;
+    /*Caslon;*/
+  }
 .top{
     /*color:whitesmoke;*/
     /*height: 537px;
@@ -319,7 +322,7 @@ body{
   padding: 0px 9px 3px;
   margin: 0px 20px;
   position: relative;*/
-
+  margin-bottom: 4px;
   position: relative;
   word-wrap: break-word;
   font-size: 14px;
