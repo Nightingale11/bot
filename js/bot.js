@@ -42,12 +42,19 @@
     }
 
     $(".voice_icon").click(function(){
+          $(".chat").css("display","none");
+          $(".voice").css("display","block");
+          $(".voice_icon").css("color","white");
+          $(".chat_icon").css("color","black");
+
     });
 
-    $("#voice_icon").click({
-      $(".chat").css("display","none");
-
-    });
+    $(".chat_icon").click(function(){
+        $(".chat").css("display","block");
+        $(".voice").css("display","none");
+        $(".voice_icon").css("color","black");
+        $(".chat_icon").css("color","white");
+      });
 
 
 })();
