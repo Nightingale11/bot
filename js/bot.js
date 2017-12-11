@@ -14,7 +14,8 @@
             var $div = $(".top_user");
             var $content="<div class='user_message'><img class='user_icon' src='img/1208228.png'><div class='input_word'><span>"+input_content+"</span><em></em></div></div>";
             $top.append($content);
-            var input_content = $(".chat_input").val('');
+            // var input_content = $(".chat_input").val('');
+            alert(input_content);
             sendAjax(input_content);
             var i = $top[0].scrollHeight;
             $top.scrollTop(i);
@@ -103,14 +104,17 @@
       });
 
       function show_search_result(voice_word,search_result){
+        var a = "https://www.google.com/";
         var $top = $(".top");
         var $search_result="<div class='search_warp'>"+
                             "<img class='bot_icon' src='img/robot.png'>"+
                             "<div class='search_result'>"+
                             "<span class='record_voice'><b>Your voice: </b> "+ voice_word+"</span><em></em>"+
-                            " <iframe src='"+search_result+"'></iframe>"+
+                            " <iframe name='result_frame' id='result_frame'></iframe>"+
                             "</div></div>";
         $top.append($search_result);
+        frames['result_frame'].location=a;
+        // frames['ifrm'].location
         var i = $top[0].scrollHeight;
         $top.scrollTop(i);
       var width = document.documentElement.clientWidth;
